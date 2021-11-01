@@ -125,3 +125,23 @@ Para executar a aplicação selecione o controlador criado e pressione F5
 2 Porque não obtemos o resultado esperado ?
 
 3 O que você tem que fazer para executar a sua aplicação e obter o resultado esperado ?
+
+## *Criando pasta no visula studio code*
+
+dotnet new mvc -o nome da pasta - cria uma pasta 
+       code -r nome da pasta - carrega a pasta
+
+- `dotnet new mvc -o MvcMovie`: cria um novo ASP.NET Core MVC na *pasta MvcMovie.*
+- `code -r MvcMovie`: carrega o *arquivo de projeto MvcMovie.csproj* no Visual Studio Code.
+
+**dotnet dev-certs https --trust -**
+
+- A barra de endereços mostra `localhost:port:5001` e não algo como `example.com`. O nome do host padrão para o computador local é `localhost` . Localhost serve somente solicitações da Web do computador local.
+
+Iniciar o aplicativo sem depuração selecionando Ctrl+F5 permite que você:
+
+- Realize alterações de código.
+- Salve o arquivo.
+- Atualize rapidamente o navegador e veja as alterações de código.
+
+**dotnet run - para rodar no navegador**
