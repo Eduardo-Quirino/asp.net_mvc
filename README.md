@@ -1,4 +1,4 @@
-## <img src="https://ichi.pro/assets/images/max/724/0*whPt9R9BXJ5xotoh.jpg" alt="7 melhores cursos online para aprender ASP .NET Core e MVC em profundidade" style="zoom:25%;" />     ASP .NET MVC
+##   <img src="https://miro.medium.com/max/724/0*whPt9R9BXJ5xotoh.jpg" alt="img" style="zoom:25%;" />   ASP .NET MVC
 
 YouTube :https://youtube.com/playlist?list=PLxNM4ef1BpxhqxiU8TRVtNlLgUeYolLdm
 
