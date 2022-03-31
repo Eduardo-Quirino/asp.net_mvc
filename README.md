@@ -1,147 +1,106 @@
-## ASP .NET MVC
+## <img src="https://ichi.pro/assets/images/max/724/0*whPt9R9BXJ5xotoh.jpg" alt="7 melhores cursos online para aprender ASP .NET Core e MVC em profundidade" style="zoom:25%;" />     ASP .NET MVC
 
+YouTube :https://youtube.com/playlist?list=PLxNM4ef1BpxhqxiU8TRVtNlLgUeYolLdm
 
+"Aula" :
 
+## Criar um aplicativo Web
 
+- Abra o [terminal integrado](https://code.visualstudio.com/docs/editor/integrated-terminal).
 
-### **Pastas**
+- Altere para o diretório ( `cd` ) que conterá o projeto.
 
-**Estrutura do projeto**
+- Execute o seguinte comando:
 
-- App_Data** – Fonte de dados
-- **App_Start** – Configurações
-- **Controllers** – Classes do Controlador
-- **Models** – Classes de dados
-- **Views** – Arquivos de UI – (Html,cshtml,etc.)
-- **Packages.****config** – Configurações Nuget
-- **Global.****asax** – inicializa a aplicação
-- **Web.****Config** – Configurações do site
-- **Scripts** – Arquivos javascripts
-- **fonts** – template bootstratp
-- **Content** – arquivos CSS, imagens
+  CLI do .NETCopiar
 
+  ```dotnetcli
+  dotnet new mvc -o MvcMovie
+  code -r MvcMovie
+  ```
 
+  - Se uma caixa de diálogo aparecer com **ativos necessários para compilação e depuração estiverem ausentes em ' MvcMovie '. Adicioná-los?**, selecione **Sim**
+  - `dotnet new mvc -o MvcMovie`: cria um novo projeto ASP.NET Core MVC na pasta *MvcMovie*
+  - `code -r MvcMovie`: Carrega o `MvcMovie.csproj` arquivo de projeto em Visual Studio Code.
 
+## Executar o aplicativo
 
+- Selecione CTRL + F5 para executar sem o depurador.
 
-### **Requisições HTTP:**
+  - Confie no certificado de desenvolvimento HTTPS executando o seguinte comando:
 
+    CLI do .NETCopiar
 
+    ```dotnetcli
+    dotnet dev-certs https --trust
+    ```
 
-•**GET** – Requisita dados de um recurso específico
+    O comando anterior não funciona no Linux. Veja a documentação da distribuição do Linux para confiar em um certificado.
 
-•Usa a própria Url para enviar dados(só texto, 255 caracteres)
+    O comando anterior exibe a caixa de diálogo a seguir, desde que o certificado não tenha sido confiável anteriormente:
 
-•Não for alterar dados no servidor; buscas e consultas
+    ![Security warning dialog](https://docs.microsoft.com/pt-br/aspnet/core/getting-started/_static/cert.png?view=aspnetcore-6.0)
 
-•Ex: **http://www.macoratti.net/?nome=****valor&nome****=valor**
+  - Selecione **Sim** se você concordar com confiar no certificado de desenvolvimento.
 
-•
+    Para obter mais informações, veja [Confiar no certificado de desenvolvimento HTTPS do ASP.NET Core](https://docs.microsoft.com/pt-br/aspnet/core/security/enforcing-ssl?view=aspnetcore-6.0#trust-the-aspnet-core-https-development-certificate-on-windows-and-macos).
 
-•**POST** – Envia dados para ser processado em um recurso específico
+  Para obter informações sobre como confiar no navegador Firefox, consulte [erro de certificado do firefox SEC_ERROR_INADEQUATE_KEY_USAGE](https://docs.microsoft.com/pt-br/aspnet/core/security/enforcing-ssl?view=aspnetcore-6.0#trust-ff).
 
-•Envia os dados no corpo da mensagem, separando a URL dos dados 
+  Visual Studio Code:
 
-•Alterar dados , enviar arquivos, proteger dados
+  - É [Kestrel](https://docs.microsoft.com/pt-br/aspnet/core/fundamentals/servers/kestrel?view=aspnetcore-6.0)
+  - Inicia um navegador.
+  - Navega para `https://localhost:5001` .
 
+  A barra de endereços mostra `localhost:port:5001` e não algo como `example.com`. O nome do host padrão para seu computador local é `localhost` . Localhost serve somente solicitações da Web do computador local.
 
-
-
-
-
-Atividade 1
-
-1 O que significa MVC ?
-
-2 Descreva resumidamente o padrão MVC .
-
-3 Em qual pasta do projeto são colocados as classes que representam os controladores de uma aplicação
-ASP .NET MVC ?
-
-4 Em qual pasta do projeto são colocados as classes que representam o modelo de dados de uma
-aplicação ASP .NET MVC ?
-
-5 Qual a convenção adotada pelo Framework ASP .NET MVC para definir o nome dos controladores ?
-
-6 Qual a convenção usada para definir o local onde as visões serão armazenadas em um projeto ASP .NET
-MVC ?
-
-7 Qual a rota padrão definida quando criamos um projeto ASP .NET MVC ?
-
-8 A rota para se chamar uma Action no Controller é sempre definida como controller action /id e não pode
-ser customizada? Onde esta rota esta definida ?
-
-9 Que tipo de dado retorna um Controlador ?
-
-10 O Controller é uma classe comum que herda de Controller ? Verdadeiro ou Falso
-
-11 Qual é o papel da View em um projeto ASP .NET MVC ?
-
-12 Quais códigos podem conter numa View ?
-
-13 Para que ser o ViewData e o ViewBag
-
-14 Que tipo de dado é o ViewBag ?
-
-15 Que tipo de dado é o ViewData
-
-16 O que é Razor
-
-17 Qual o símbolo usado pelo Razor para iniciar expressões e blocos de código ?
-
-
-
-
-Atividade 2
-
-Crie um projeto ASP .NET MVC 5 com chamado Atividade2
-
-Utilize o template Empty --> MVC
-
-Crie um controlador chamado Atividade2 usando o Scaffold MVC 5 Controller Empty
-
-Defina uma propriedade chamada Nome usando ViewData e atribua a ela o seu nome no método Action
-Index
-
-Defina uma propriedade chamada Atividade usando ViewBag e atribua a ela a string “Atividade 2” no
-método Action Index
-
-Defina uma propriedade chamada Curso usando ViewBag atribua a ela a string “Curso ASP .NET MVC 5” no
-método Action Index
-
-Crie uma view a partir do método Action Index do controle que você acabou de criar usando o template
-Empty e desmarque a opção : use a Layout page
-
-Defina o código na view para receber os dados atribuídos às propriedades Nome e Curso
-
-A saída HTML da view deverá ser a seguinte: (Observe que os valores recebidos devem estar em
-
-Parabéns Seu Nome, você concluiu a Atividade 2 do Curso ASP .NET MVC 5
-
-Para executar a aplicação selecione o controlador criado e pressione F5
-
-1 Qual será o resultado obtido ?
-
-2 Porque não obtemos o resultado esperado ?
-
-3 O que você tem que fazer para executar a sua aplicação e obter o resultado esperado ?
-
-## *Criando pasta no visula studio code*
-
-dotnet new mvc -o nome da pasta - cria uma pasta 
-       code -r nome da pasta - carrega a pasta
-
-- `dotnet new mvc -o MvcMovie`: cria um novo ASP.NET Core MVC na *pasta MvcMovie.*
-- `code -r MvcMovie`: carrega o *arquivo de projeto MvcMovie.csproj* no Visual Studio Code.
-
-**dotnet dev-certs https --trust -**
-
-- A barra de endereços mostra `localhost:port:5001` e não algo como `example.com`. O nome do host padrão para o computador local é `localhost` . Localhost serve somente solicitações da Web do computador local.
-
-Iniciar o aplicativo sem depuração selecionando Ctrl+F5 permite que você:
+Iniciar o aplicativo sem depuração selecionando CTRL + F5 permite que você:
 
 - Realize alterações de código.
-- Salve o arquivo.
-- Atualize rapidamente o navegador e veja as alterações de código.
 
-**dotnet run - para rodar no navegador**
+- Salve o arquivo.
+
+- Atualize rapidamente o navegador e veja as alterações no código.
+
+  ![Home or Index page](https://docs.microsoft.com/pt-br/aspnet/core/tutorials/first-mvc-app/start-mvc/_static/home50-port5001.png?view=aspnetcore-6.0)
+
+ 
+
+---
+
+##                                          Padrão de uso MVC
+
+
+
+![Economize com MVC no PHP](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTskXHoHMi9nGwZBHJP4jZDEAhnIuwu9nC_deYiWSG52vptxZWasE5C1q-vHMCDv6pFCQo&usqp=CAU)
+
+> Model : Cuida do banco de dados, informações 
+>
+>  View: Pode receber informações do MODEL, e exibe na tela 
+>
+> Controller: Monitora a VIEW  e o MODEL 
+
+- #### Aula 05 - Criando o projeto em ASP MVC
+
+- #### Aula 06 - Pastas e arquivos do Projeto
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
