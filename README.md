@@ -85,6 +85,20 @@ Iniciar o aplicativo sem depuração selecionando CTRL + F5 permite que você:
 
 - #### Aula 06 - Pastas e arquivos do Projeto
 
+- #### Aula 07 - Criando um Controller
+
+- ####  Aula 09 - Criando uma View
+
+- #### Aula 10 - Testando a View
+
+- #### Aula 11 - Abrindo as páginas com View
+
+- #### Aula 12 - Criando links com Helper
+
+- #### Aula 13 - Navegando entre páginas
+
+
+
 
 
 
